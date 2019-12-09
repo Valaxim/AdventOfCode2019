@@ -12,7 +12,6 @@ public class Day2 {
         Solution solution = new Solution();
         solution.executePart1(ints);
         solution.executePart2();
-
     }
 }
 

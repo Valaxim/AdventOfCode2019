@@ -18,16 +18,14 @@ public class Day5 {
     }
 
     private static void calculatePartOne(int[] ints) {
-        Solution k = new Solution();
+        SolutionDay5 k = new SolutionDay5();
         k.setArray(ints);
         k.execute(INPUT_PART_ONE);
     }
 
     private static void calculatePartTwo(int[] ints) {
-        Solution k = new Solution();
+        SolutionDay5 k = new SolutionDay5();
         k.setArray(ints);
         k.execute(INPUT_PART_TWO);
     }
-
 }
-

@@ -9,12 +9,12 @@ public class Solution {
 
     private static final int EXPECTED_RESULT = 19690720;
 
-    private static final int ADD_CODE = 1;
-    private static final int MULTIPLICATION_CODE = 2;
-    private static final int HALT_CODE = 99;
-    private static final int STEPPING_FORWARD_VALUE = 4;
+    protected static final int ADD_CODE = 1;
+    protected static final int MULTIPLICATION_CODE = 2;
+    protected static final int HALT_CODE = 99;
+    protected static final int STEPPING_FORWARD_VALUE = 4;
 
-    private int array[];
+    protected int array[];
 
     public void executePart1(int[] ints) {
         setArray(ints);
