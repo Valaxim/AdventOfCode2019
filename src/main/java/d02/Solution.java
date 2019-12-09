@@ -1,8 +1,13 @@
 package d02;
 
+import utils.ParseUtil;
+
+import java.io.IOException;
 import java.util.Arrays;
 
 public class Solution {
+
+    private static final int EXPECTED_RESULT = 19690720;
 
     private static final int ADD_CODE = 1;
     private static final int MULTIPLICATION_CODE = 2;
@@ -10,6 +15,32 @@ public class Solution {
     private static final int STEPPING_FORWARD_VALUE = 4;
 
     private int array[];
+
+    public void executePart1(int[] ints) {
+        setArray(ints);
+        replaceArrayValue();
+        int execute = execute();
+        System.out.println("Answer Day2 part 1: " + execute);
+    }
+
+
+    public void executePart2() throws IOException {
+        Solution k2;
+        ParseUtil parser = new ParseUtil();
+        for (int noun = 0; noun < 100; noun++) {
+            for (int verb = 0; verb < 100; verb++) {
+                k2 = new Solution();
+                int[] integers = parser.readInputContainsIntegers("inputDay2.txt");
+                k2.setArray(integers);
+                k2.replaceArrayValue(noun, verb);
+                if (EXPECTED_RESULT == k2.execute()) {
+                    System.out.println("Answer Day2 part 2: " + (noun * 100 + verb));
+                    System.out.println("i: " + noun + " j: " + verb);
+                    return;
+                }
+            }
+        }
+    }
 
     public int execute() {
         int i = 0;
@@ -52,8 +83,8 @@ public class Solution {
     }
 
     public void printArray() {
-       System.out.println("------------------ ARRAY ------------------");
-       System.out.println( Arrays.toString(array));
-       System.out.println("-------------------------------------------");
+        System.out.println("------------------ ARRAY ------------------");
+        System.out.println(Arrays.toString(array));
+        System.out.println("-------------------------------------------");
     }
 }
