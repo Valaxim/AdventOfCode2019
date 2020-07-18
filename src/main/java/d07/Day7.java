@@ -20,6 +20,7 @@ public class Day7 extends Day5 {
         int results2 = solutionDay7part2.calculatePartTwo(ints);
 
         System.out.println("Part2 answer is: " + results2);
+
     }
 }
 
